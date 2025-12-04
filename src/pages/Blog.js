@@ -3,7 +3,7 @@ import BlogCard from '../components/BlogCard';
 
 const Blog = () => {
   const posts = [
-   
+
     {
       id: 1,
       title: "Privacy-Preserving Technologies",
@@ -26,13 +26,13 @@ const Blog = () => {
     },
     {
       id: 3,
-      title: "Zcash Privacy: Why Shielded Transactions Are Not Fully Invisible",
-      source: "BitHide.io",
-      category: "Cryptocurrency",
-      desc: "Explains Zcash's shielded transactions, privacy features, and limitations using zk-SNARKs.",
-      date: "Nov 27, 2025",
-      url: "https://bithide.io/blog/security/why-zcash-transactions-are-not-invisible/",
-      imageUrl: "https://images.unsplash.com/photo-1639762681488-eb350cfad890?w=400&h=250&fit=crop"
+      title: "Tachyon: Scaling Zcash with Oblivious Synchronization",
+      source: "Seanbowe.com",
+      category: "Tachyon",
+      desc: "Zcash’s shielded transactions offer the strongest privacy guarantees of any distributed financial network today.",
+      date: "April 02, 2025",
+      url: "https://seanbowe.com/blog/tachyon-scaling-zcash-oblivious-synchronization/",
+      imageUrl: "https://seanbowe.com/blog/tachyaction-at-a-distance/orchard_vs_tachyon.png"
     },
     {
       id: 4,
@@ -46,12 +46,12 @@ const Blog = () => {
     },
     {
       id: 5,
-      title: "Pasta Curves Rust Implementation for Zcash",
-      source: "GitHub",
-      category: "Cryptography",
-      desc: "Technical insights into the Pallas and Vesta curves powering Zcash's cryptographic proofs.",
-      date: "N/A",
-      url: "https://github.com/zcash/pasta_curves",
+      title: "Zcash and Quantum Computers",
+      source: "Seanbowe.com",
+      category: "Zcash",
+      desc: "Zcash’s protocol designers and cryptographers differ about how soon quantum computers will become a real threat.",
+      date: "Oct 10,2025",
+      url: "https://seanbowe.com/blog/zcash-and-quantum-computers/",
       imageUrl: "https://images.unsplash.com/photo-1618057360649-34b9380a0460?w=400&h=250&fit=crop"
     },
     {
@@ -253,21 +253,36 @@ const Blog = () => {
       date: "2025",
       url: "https://www.sciencedirect.com/science/article/pii/S2096720925001150",
       imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop"
-    }
+    },
+    {
+      id: 26,
+      title: "Zcash Privacy: Why Shielded Transactions Are Not Fully Invisible",
+      source: "BitHide.io",
+      category: "Cryptocurrency",
+      desc: "Explains Zcash's shielded transactions, privacy features, and limitations using zk-SNARKs.",
+      date: "Nov 27, 2025",
+      url: "https://bithide.io/blog/security/why-zcash-transactions-are-not-invisible/",
+      imageUrl: "https://images.unsplash.com/photo-1639762681488-eb350cfad890?w=400&h=250&fit=crop"
+    },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-16 animate-fade-in">
-      <div className="text-center mb-20">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Trending Privacy & Crypto Blogs</h2>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-           Stay synced with the updates.</p>
-      </div>
+    <div className="min-h-screen py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20 animate-fade-in-up">
+          <h2 className="text-5xl font-display font-extrabold text-gray-900 dark:text-white mb-6">
+            Privacy <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Insights</span>
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Stay synced with the latest updates, research, and trends in the privacy ecosystem.
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <BlogCard key={post.id} post={post} />
-        ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up animation-delay-200">
+          {posts.map((post) => (
+            <BlogCard key={post.id} post={post} />
+          ))}
+        </div>
       </div>
     </div>
   );
