@@ -1,6 +1,6 @@
 # **Zcrypt Academy**
 
-Learn Zero-Knowledge Proofs, Rust programming, and Privacy concepts through modern, read-only interactive content.
+Learn Zero-Knowledge Proofs, Rust programming, and Privacy concepts through modern, interactive content.
 
 ---
 
