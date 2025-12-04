@@ -583,7 +583,7 @@ mod tests {
                         <ArrowRight className="w-3 h-3 mr-1 rotate-180" /> Back to Courses
                     </Link>
                     <h3 className="font-extrabold text-gray-900 text-xl flex items-center">
-                        <Layers className="w-6 h-6 mr-2 text-purple-600" /> Rust Mastery
+                        <Layers className="w-6 h-6 mr-2 text-purple-600" /> Rust Book
                     </h3>
                 </div>
                 <div className="flex-1 overflow-y-auto p-4 space-y-2">
