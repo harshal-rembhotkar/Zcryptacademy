@@ -1,53 +1,72 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Terminal, TrendingUp, Coffee } from 'lucide-react';
+import { Shield, Terminal, TrendingUp, Coffee, ArrowRight } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="text-center max-w-3xl mx-auto mb-24 animate-fade-in-up">
-        <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-50 text-purple-700 text-sm font-bold mb-8 border border-purple-100 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-purple-600 mr-2 animate-pulse"></span>
-          Anon-friendly tech
+      <section className="relative pt-20 pb-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-50/50 to-white dark:from-slate-900 dark:to-slate-900 -z-10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300/30 dark:bg-purple-900/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob"></div>
+          <div className="absolute top-20 right-10 w-72 h-72 bg-cyan-300/30 dark:bg-cyan-900/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300/30 dark:bg-pink-900/20 rounded-full blur-3xl mix-blend-multiply dark:mix-blend-screen animate-blob animation-delay-4000"></div>
         </div>
-        <h1 className="text-6xl font-extrabold text-gray-900 tracking-tight mb-8 leading-tight">
-          Zcrypt <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-500">Academy</span>
-        </h1>
-        <p className="text-xl text-gray-500 leading-relaxed mb-12 max-w-2xl mx-auto">
-          Learn Zero-Knowledge Proofs, Rust and Privacy tech the way they should be: clear, interactive and distraction-free.
+
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border border-purple-100 dark:border-slate-700 text-brand-primary dark:text-brand-accent text-sm font-bold mb-8 shadow-sm animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-brand-primary dark:bg-brand-accent mr-2 animate-pulse"></span>
+            Anon-friendly tech education
+          </div>
+
+          <h1 className="text-6xl md:text-7xl font-display font-extrabold text-gray-900 dark:text-white tracking-tight mb-8 leading-tight animate-fade-in-up">
+            Learn <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Privacy</span> <br />
+            & Zero Knowledge
+          </h1>
+
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+            Dive deep into ZK, Rust, and privacy-preserving protocols. Clear explanations, interactive stories, and a distraction-free learning environment.
           </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link
-            to="/courses"
-            className="px-10 py-4 bg-purple-600 text-white rounded-full font-bold shadow-xl shadow-purple-200 hover:bg-purple-700 hover:shadow-2xl transition-all transform hover:-translate-y-1 text-center"
-          >
-            Explore Courses
-          </Link>
-          <Link
-            to="/stories"
-            className="px-10 py-4 bg-white text-purple-700 border border-gray-200 rounded-full font-bold hover:bg-purple-50 hover:border-purple-200 transition-all transform hover:-translate-y-1 text-center"
-          >
-            Read Stories
-          </Link>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-400">
+            <Link
+              to="/courses"
+              className="px-8 py-4 bg-brand-primary text-white rounded-full font-bold shadow-lg shadow-brand-primary/30 hover:bg-brand-secondary hover:shadow-brand-secondary/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2"
+            >
+              Explore Courses <ArrowRight size={20} />
+            </Link>
+            <Link
+              to="/stories"
+              className="px-8 py-4 bg-white dark:bg-slate-800 text-gray-900 dark:text-white border border-gray-200 dark:border-slate-700 rounded-full font-bold hover:bg-gray-50 dark:hover:bg-slate-700 transition-all transform hover:-translate-y-1"
+            >
+              Read Stories
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Features Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {[
-          { title: "Zero Knowledge", icon: Shield, desc: "Master the fundamentals." },
-          { title: "Rust Lang", icon: Terminal, desc: "Systems programming." },
-          { title: "Trends", icon: TrendingUp, desc: "Stay updated." },
-          { title: "Stories", icon: Coffee, desc: "Learn via analogy." },
-        ].map((item, idx) => (
-          <div key={idx} className="p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-purple-100 transition-all duration-300 group">
-            <item.icon className="w-10 h-10 text-gray-300 group-hover:text-purple-600 transition-colors mb-6" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-            <p className="text-sm text-gray-500">{item.desc}</p>
+      <section className="py-20 bg-gray-50 dark:bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Zero Knowledge", icon: Shield, desc: "Master the fundamentals of ZK proofs.", color: "text-brand-primary" },
+              { title: "Rust Lang", icon: Terminal, desc: "Build secure systems with Rust.", color: "text-brand-secondary" },
+              { title: "Trends", icon: TrendingUp, desc: "Stay ahead of privacy tech trends.", color: "text-brand-accent" },
+              { title: "Stories", icon: Coffee, desc: "Learn complex concepts via analogy.", color: "text-orange-500" },
+            ].map((item, idx) => (
+              <div key={idx} className="glass-panel p-8 rounded-3xl hover:border-brand-primary/30 transition-all duration-300 group hover:-translate-y-2">
+                <div className={`w-14 h-14 rounded-2xl bg-gray-50 dark:bg-slate-800 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <item.icon className={`w-7 h-7 ${item.color}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{item.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
