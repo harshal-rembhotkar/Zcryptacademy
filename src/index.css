@@ -2,8 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-light-bg text-light-text transition-colors duration-300;
+  }
+  .dark body {
+    @apply bg-dark-bg text-dark-text;
+  }
+}
+
 @layer utilities {
-  /* Animations defined in config */
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  .dark .glass-panel {
+    @apply bg-slate-900/70 border-slate-700/30 shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary;
+  }
+  .dark .text-gradient {
+    @apply from-brand-accent to-brand-primary;
+  }
 }
 
 /* Custom Scrollbar */
@@ -11,14 +32,16 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #f9fafb; 
+  @apply bg-transparent; 
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #c4b5fd;
-  border-radius: 20px;
+  @apply bg-gray-300 rounded-full;
+}
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #a78bfa;
+  @apply bg-brand-primary;
 }
 
 html {
