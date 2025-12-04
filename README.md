@@ -6,7 +6,7 @@ Learn Zero-Knowledge Proofs, Rust programming, and Privacy concepts through mode
 
 ## 📖 **Introduction**
 
-**Zcrypt Academy** is an interactive, read-only educational platform designed to simplify complex privacy-preserving technologies and systems programming concepts.
+**Zcrypt Academy** is an interactive,educational platform designed to simplify complex privacy-preserving technologies and systems programming concepts.
 
 It bridges the gap between cryptographic theory and hands-on implementation through structured learning paths in:
 
